@@ -24,5 +24,18 @@ public class UserController extends Controller{
     ReturnMsg findAllUser = userSrevice.findAllUser();
     renderJson(findAllUser);
   }
+  /**
+   * @Description 通过id查询用户
+   * @author taohanlin(898899528@qq.com)
+   * @date 2016年5月23日 下午2:32:38
+   * @action findUserByName
+   * @return void
+   */
+  public void findUserById(){
+    Integer userId = this.getParaToInt("userId",1);
+    ReturnMsg result=userSrevice.findUserById(userId);
+    renderJson(result);
+    
+  }
   
 }

@@ -26,6 +26,18 @@ public class UserModel extends Model<UserModel>{
     List<Record> find = Db.find("select * from user_info");
     return find;
   }
+
+/**
+ * @Description 通过id查询用户信息
+ * @author taohanlin(898899528@qq.com)
+ * @date 2016年5月23日 下午2:40:09
+ * @action findUserById
+ * @return Record
+ */
+  public Record findUserById(Integer userId) {
+    Record record = Db.findFirst("select * from user_info where id=?",userId);
+    return record;
+  }
   
  
 }

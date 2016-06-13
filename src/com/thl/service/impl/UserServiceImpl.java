@@ -17,7 +17,8 @@ public class UserServiceImpl implements UserService{
     ReturnMsg msg=new ReturnMsg(Response.ERROR);
     List<Record> finaAll = UserModel.Dao.finaAll();
     if (Objects.nonNull(finaAll)) {
-     msg=new ReturnMsg(Response.SUCCESS);     msg.setData(finaAll);
+     msg=new ReturnMsg(Response.SUCCESS);     
+     msg.setData(finaAll);
     }
     return msg;
   }

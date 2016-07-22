@@ -8,7 +8,9 @@ package com.thl.resp;
 public enum Response {
   
   ERROR("13000","出错~"),
-  SUCCESS("12000","成功!");
+  SUCCESS("12000","成功!"),
+  FAIL("13000", "请求失败"),
+  IMAGE_ERROR("13000","图片上传失败~");
 
   private String code;
   private String name;

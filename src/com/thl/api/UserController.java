@@ -10,8 +10,20 @@ import com.thl.service.impl.UserServiceImpl;
  * @author taohanlin(898899528@qq.com)
  * @date 2016年5月19日 下午2:56:33
  */
-public class UserController extends Controller{
-  private static UserService userSrevice=new UserServiceImpl();
+public class UserController extends Controller {
+  private static UserService userSrevice = new UserServiceImpl();
+
+
+  /**
+   * @Description 转到index页面
+   * @author taohanlin(898899528@qq.com)
+   * @date 2016年7月22日 上午11:44:17
+   * @action index
+   * @return void
+   */
+  public void index() {
+    render("/index.jsp");
+  }
 
   /**
    * @Description 查询用户表所有信息
@@ -20,10 +32,11 @@ public class UserController extends Controller{
    * @action findUserAll
    * @return void
    */
-  public void findUserAll(){
+  public void findUserAll() {
     ReturnMsg findAllUser = userSrevice.findAllUser();
     renderJson(findAllUser);
   }
+
   /**
    * @Description 通过id查询用户
    * @author taohanlin(898899528@qq.com)
@@ -31,11 +44,11 @@ public class UserController extends Controller{
    * @action findUserByName
    * @return void
    */
-  public void findUserById(){
-    Integer userId = this.getParaToInt("userId",1);
-    ReturnMsg result=userSrevice.findUserById(userId);
+  public void findUserById() {
+    Integer userId = this.getParaToInt("userId", 1);
+    ReturnMsg result = userSrevice.findUserById(userId);
     renderJson(result);
-    
+
   }
-  
+
 }

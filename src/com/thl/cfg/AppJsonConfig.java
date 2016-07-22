@@ -51,12 +51,15 @@ public class AppJsonConfig extends JFinalConfig{
     loadProp("pro.txt", "dev.txt");
     me.setDevMode(PropKit.getBoolean("devMode", false));
     me.setLoggerFactory(new Slf4jLogFactory());
+    //配置文件路径
+    me.setUploadedFileSaveDirectory("C:/apache-tomcat-8.0.30/webapps/ROOT/file/");
     me.setBaseViewPath("/html");
     // ApiConfigKit 设为开发模式可以在开发阶段输出请求交互的 xml 与 json 数据
     ApiConfigKit.setDevMode(me.getDevMode());
     
     me.setError404View("index.html");
     me.setError500View("/html/error/502.html");
+    
     
   }
  

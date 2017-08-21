@@ -5,11 +5,11 @@ import java.util.Properties;
 
 public class OSSConfigure {
 
-	private String endpoint = "http://oss-cn-hangzhou.aliyuncs.com";
-    private String accessKeyId = "Z7cuCHuxGu9JqU1h";
-    private String accessKeySecret = "wtM10DEAXdiMo4OMEoJdxAeL9hurDP";
-    private String bucketName = "huahan";
-    private String accessUrl = "http://pic.huakr.com";
+　　 private String endpoint = "";
+    private String accessKeyId = "";
+    private String accessKeySecret = "";
+    private String bucketName = "";
+    private String accessUrl = "";
   
     public OSSConfigure(){
 
